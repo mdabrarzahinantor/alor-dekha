@@ -6,9 +6,17 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "aos": "^2.3.4",
+    "firebase": "^8.7.0",
+    "framer-motion": "^4.1.17",
+    "lax.js": "^2.0.3",
     "react": "^17.0.2",
+    "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.2",
+    "react-linkify": "^1.0.0-alpha",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "scroll-out": "^2.2.12",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

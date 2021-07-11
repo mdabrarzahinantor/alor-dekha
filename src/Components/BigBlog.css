@@ -1,0 +1,153 @@
+.big-blog {
+  width: 100%;
+  background-color: #212121;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  overflow-y: scroll;
+  position: relative;
+}
+.bb-blog {
+  z-index: 100;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: center */
+  flex-direction: column;
+  width: 100%;
+  max-width: 1080px;
+  background-color: #2f2f2f;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.bb-blog-link {
+  font-size: 1rem;
+  color: #bbb;
+  font-weight: bold;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+.bb-blog-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-family: "BN_4";
+  color: #fff;
+  text-align: center;
+}
+.bb-blog-w-d-m {
+  font-size: 1.2rem;
+  font-family: "BN_4";
+  margin-top: 0.5rem;
+  color: #bbb;
+}
+.bb-blog-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-family: "BN_8";
+  margin-top: 0.5rem;
+  color: #bbb;
+}
+.bb-blog-tag {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bb-blog-tag i {
+  margin-right: 0.2rem;
+}
+.bb-blog-desc {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #fff;
+  font-family: "BN_9";
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+.big-blog::-webkit-scrollbar {
+  width: 0rem;
+}
+.big-blog::-webkit-scrollbar-track {
+  width: 0rem;
+  background-color: #191919;
+}
+.big-blog::-webkit-scrollbar-thumb {
+  width: 0rem;
+  background-color: #1e1e1e;
+}
+
+.big-blog footer {
+  margin-top: 2rem;
+  width: 100%;
+}
+.bb-image {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.bb-image img {
+  width: 100%;
+}
+.bb-blog div blockquote {
+  background-color: rgba(187, 187, 187, 0.1);
+  padding-left: 1rem;
+  border-left: 6px solid #bbb;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 3px 0 0 3px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.bb-blog ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1.5rem;
+  margin-block-end: 1.5rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  box-sizing: border-box;
+}
+
+.bb-blog h1 {
+  font-size: 1.8rem;
+
+  font-family: "BN_4";
+  font-weight: normal;
+}
+.bb-blog a {
+  color: #bbb;
+  text-decoration: none;
+}
+.bb-blog footer {
+  font-size: 2rem;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bb-blog img {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+.big-poster .bb-image {
+  position: static;
+  overflow: visible;
+  z-index: 1000;
+  height: fit-content;
+}
+.big-poster .bb-blog {
+  margin-top: 4rem;
+}

@@ -1,0 +1,81 @@
+.blog {
+  max-width: 90%;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "BN_5";
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.blog-image {
+  width: 100%;
+}
+.blog-image img {
+  width: 100%;
+}
+.blog-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.blog-desc {
+  font-size: 1rem;
+  color: #bbb;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  font-family: "BN_4";
+}
+
+.blog-footer {
+  display: flex;
+  margin-left: 1rem;
+}
+.blog-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-family: "BN_8";
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-left: 1rem;
+}
+.blog-link:first-child {
+  margin-left: 0;
+}
+.blog-link div {
+  margin-left: 0.2rem;
+}
+.blog {
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.blog:hover {
+  box-shadow: none;
+}
+.blog {
+  width: 100% !important;
+}
+a {
+  width: 100%;
+}
+.blog-desc img {
+  display: none;
+}
+.blog-desc h1 {
+  font-size: 1rem !important;
+  font-weight: normal;
+}
+.blog-desc b {
+  font-weight: normal;
+}
+.blog-desc i {
+  font-weight: normal;
+  font-style: normal;
+}

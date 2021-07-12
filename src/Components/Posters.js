@@ -16,7 +16,7 @@ function Main() {
   useEffect(() => {
     setLoading(true);
     db.collection("posters")
-      .orderBy("timestamp")
+      .orderBy("title")
       .startAfter(latestDoc || 0)
       .limit(6)
       .onSnapshot((snap) => {
@@ -43,7 +43,7 @@ function Main() {
   const fetchMore = () => {
     setLoading(true);
     db.collection("posters")
-      .orderBy("timestamp")
+      .orderBy("title")
       .startAfter(latestDoc || 0)
       .limit(6)
       .onSnapshot((snap) => {
@@ -56,10 +56,10 @@ function Main() {
     <div className="main posters">
       <Search />
       <main className="main-container">
-        {blogs.reverse().map((blog) => {
+        {blogs.map((blog) => {
           return (
             <Poster
-              key={uuidv4()}
+              key={blog?.id}
               id={blog?.id}
               author={blog?.data.author}
               img_url={blog?.data.img_url}

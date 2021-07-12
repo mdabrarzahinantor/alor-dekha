@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./BigBlog.css";
-import db from "./Firebase";
+import db, { auth } from "./Firebase";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
 function BigBlog() {
   const { poster } = useParams();
   const [blog, setBlog] = useState({});
+  const [author, setAuthor] = useState("");
 
   useEffect(() => {
     db.collection("posters")
@@ -17,6 +18,20 @@ function BigBlog() {
       });
   }, []);
 
+  useEffect(() => {
+    if (blog.author) {
+      db.collection("authors")
+        .where("author", "==", blog?.author)
+        .onSnapshot((snap) => {
+          let authors = snap.docs.map((doc) => ({
+            id: doc.id,
+          }));
+
+          setAuthor(authors[0]?.id);
+        });
+    }
+  }, [blog]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,13 +40,20 @@ function BigBlog() {
       className="big-poster big-blog"
     >
       <div className="bb-blog">
-        <div className="bb-blog-link">
+        <div
+          onClick={() => navigator.clipboard.writeText(window.location.href)}
+          className="bb-blog-link"
+        >
           <i class="fas fa-link    "></i> {poster}
         </div>
         <div className="bb-blog-title">{blog?.title}</div>
         <div className="bb-blog-w-d-m">
-          {blog?.author} |{" "}
-          {new Date(blog?.timestamp?.toDate()).toLocaleDateString()}
+          {
+            <Link to={`${author !== undefined ? `/author/${author}` : "/"}`}>
+              {blog?.author}
+            </Link>
+          }{" "}
+          | {new Date(blog?.timestamp?.toDate()).toLocaleDateString()}
         </div>
         {/* <div className="bb-blog-tags">
           <div className="bb-blog-tag">

@@ -6,11 +6,15 @@ import { useParams } from "react-router-dom";
 import Search from "./Search";
 import { tags } from "./Tags";
 import db from "./Firebase";
-
+import Poster from "./Poster";
 function Main() {
   const { author } = useParams();
 
   const [writer, setWriter] = useState("");
+  const [blogs, setBlogs] = useState([]);
+  const [posters, setPosters] = useState([]);
+  const [isBlogs, setIsBlogs] = useState(false);
+  const [isPosters, setIsPosters] = useState(false);
 
   useEffect(() => {
     db.collection("authors")
@@ -20,11 +24,17 @@ function Main() {
       });
   }, [author]);
 
-  const [blogs, setBlogs] = useState([]);
-
   useEffect(() => {
     db.collection("blogs").onSnapshot((snap) => {
       setBlogs(
+        snap.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
+    db.collection("posters").onSnapshot((snap) => {
+      setPosters(
         snap.docs.map((doc) => ({
           id: doc.id,
           data: doc.data(),
@@ -49,9 +59,10 @@ function Main() {
   return (
     <div className="main">
       <Search />
+      <div className="t">Articles</div>
       <main className="main-container">
         {blogs.map((blog) => {
-          if (blog.data.author === writer)
+          if (blog.data.author === writer) {
             return (
               <Blog
                 key={blog?.id}
@@ -65,6 +76,24 @@ function Main() {
                 title={blog?.data.title}
               />
             );
+          }
+        })}
+      </main>
+      <div className="t">Posters</div>
+      <main className="main-container">
+        {posters.map((blog) => {
+          if (blog.data.author === writer) {
+            return (
+              <Poster
+                key={blog?.id}
+                id={blog?.id}
+                author={blog?.data.author}
+                img_url={blog?.data.img_url}
+                timestamp={blog?.data.timestamp}
+                title={blog?.data.title}
+              />
+            );
+          }
         })}
       </main>
 

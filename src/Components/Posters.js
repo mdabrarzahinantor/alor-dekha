@@ -16,7 +16,7 @@ function Main() {
   useEffect(() => {
     setLoading(true);
     db.collection("posters")
-      .orderBy("timestamp", "desc")
+      .orderBy("timestamp")
       .startAfter(latestDoc || 0)
       .limit(6)
       .onSnapshot((snap) => {
@@ -43,7 +43,7 @@ function Main() {
   const fetchMore = () => {
     setLoading(true);
     db.collection("posters")
-      .orderBy("timestamp", "desc")
+      .orderBy("timestamp")
       .startAfter(latestDoc || 0)
       .limit(6)
       .onSnapshot((snap) => {

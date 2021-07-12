@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Search from "./Search";
 import Poster from "./Poster";
 import db from "./Firebase";
+import { v4 as uuidv4 } from "uuid";
 
 function Main() {
   const [blogs, setBlogs] = useState([]);
@@ -15,7 +16,7 @@ function Main() {
   useEffect(() => {
     setLoading(true);
     db.collection("posters")
-      .orderBy("timestamp")
+      .orderBy("timestamp", "desc")
       .startAfter(latestDoc || 0)
       .limit(6)
       .onSnapshot((snap) => {
@@ -42,7 +43,7 @@ function Main() {
   const fetchMore = () => {
     setLoading(true);
     db.collection("posters")
-      .orderBy("timestamp")
+      .orderBy("timestamp", "desc")
       .startAfter(latestDoc || 0)
       .limit(6)
       .onSnapshot((snap) => {
@@ -55,10 +56,10 @@ function Main() {
     <div className="main posters">
       <Search />
       <main className="main-container">
-        {blogs.map((blog) => {
+        {blogs.reverse().map((blog) => {
           return (
             <Poster
-              key={blog?.id}
+              key={uuidv4()}
               id={blog?.id}
               author={blog?.data.author}
               img_url={blog?.data.img_url}

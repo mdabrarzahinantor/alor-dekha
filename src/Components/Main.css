@@ -382,6 +382,6 @@
   transform: scale(1);
   transition: all 0.1s ease;
 }
-i {
-  text-decoration: none !important;
+a {
+  text-decoration: none;
 }

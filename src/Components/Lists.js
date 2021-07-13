@@ -6,6 +6,7 @@ import Search from "./Search";
 import { Link } from "react-router-dom";
 import db from "./Firebase";
 import { motion } from "framer-motion";
+import Loading from "./Loading";
 
 function Main() {
   const [lists, setLists] = useState([]);
@@ -54,16 +55,7 @@ function Main() {
           ))}
         </ol>
       </main>
-      {loading && (
-        <div className="loader">
-          <div className="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      )}
+      {loading && <Loading />}
       <Footer />
     </div>
   );

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import db from "./Firebase";
 import { motion } from "framer-motion";
 import { v4 } from "uuid";
+import Loading from "./Loading";
 
 function Main() {
   const [authors, setAuthors] = useState([]);
@@ -46,18 +47,7 @@ function Main() {
           ))}
         </ol>
       </main>
-      {loading ? (
-        <div className="loader">
-          <div className="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
+      {loading ? <Loading /> : <></>}
       <Footer />
     </div>
   );

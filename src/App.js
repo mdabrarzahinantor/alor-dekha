@@ -14,6 +14,7 @@ import Logo from "./Assets/Images/LOGO.svg";
 import { useState } from "react";
 import Search from "./Components/BigSearch";
 import Author from "./Components/Author";
+import Loading from "./Components/Loading";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -185,6 +186,9 @@ function App() {
           </Route>
           <Route exact path="/search">
             <Search />
+          </Route>
+          <Route exact path="/loading">
+            <Loading />
           </Route>
         </div>
       </BrowserRouter>

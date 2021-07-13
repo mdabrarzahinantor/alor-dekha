@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Search from "./Search";
 import Poster from "./Poster";
 import db from "./Firebase";
+import Loading from "./Loading";
 // import { v4 as uuidv4 } from "uuid";
 
 function Main() {
@@ -70,14 +71,7 @@ function Main() {
         })}
       </main>
       {loading ? (
-        <div className="loader">
-          <div className="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+        <Loading />
       ) : (
         <>
           {!isEmpty && (

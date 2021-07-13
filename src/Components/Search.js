@@ -7,7 +7,7 @@ function Search() {
       <form className="main-search-input input">
         <input id="search" />
         <label htmlFor="search">
-          <i class="fas fa-search    "></i>{" "}
+          <i className="fas fa-search    "></i>{" "}
         </label>
       </form>
     </Link>

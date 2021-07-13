@@ -4,6 +4,7 @@ import "./Main.css";
 import Footer from "./Footer";
 import Search from "./Search";
 import db from "./Firebase";
+import Loading from "./Loading";
 
 function Main() {
   const [blogs, setBlogs] = useState([]);
@@ -21,7 +22,7 @@ function Main() {
         updateState(snap);
         setLoading(false);
       });
-  }, []);
+  }, [latestDoc]);
 
   const updateState = (snap) => {
     if (snap.size !== 0) {
@@ -71,14 +72,7 @@ function Main() {
         })}
       </main>{" "}
       {loading ? (
-        <div className="loader">
-          <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+        <Loading />
       ) : (
         <>
           {!isEmpty && (

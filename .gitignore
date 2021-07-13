@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# For avoiding problem on using multiple package manager
+package-lock.json
+yarn.lock

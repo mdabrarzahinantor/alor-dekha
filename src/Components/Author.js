@@ -4,17 +4,19 @@ import "./Main.css";
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 import Search from "./Search";
-import { tags } from "./Tags";
+// import { tags } from "./Tags";
 import db from "./Firebase";
 import Poster from "./Poster";
+import { v4 } from "uuid";
+
 function Main() {
   const { author } = useParams();
 
   const [writer, setWriter] = useState("");
   const [blogs, setBlogs] = useState([]);
   const [posters, setPosters] = useState([]);
-  const [isBlogs, setIsBlogs] = useState(false);
-  const [isPosters, setIsPosters] = useState(false);
+  // const [isBlogs, setIsBlogs] = useState(false);
+  // const [isPosters, setIsPosters] = useState(false);
 
   useEffect(() => {
     db.collection("authors")
@@ -77,6 +79,7 @@ function Main() {
               />
             );
           }
+          return <div key={v4()} style={{ display: "none" }} />;
         })}
       </main>
       <div className="t">Posters</div>
@@ -94,6 +97,7 @@ function Main() {
               />
             );
           }
+          return <div key={v4()} style={{ display: "none" }} />;
         })}
       </main>
 

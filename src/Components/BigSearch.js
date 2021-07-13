@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Blog from "./Blog";
 import db from "./Firebase";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import { motion } from "framer-motion";
 
 function Search() {
@@ -51,7 +51,7 @@ function Search() {
           id="search"
         />
         <label htmlFor="search">
-          <i class="fas fa-search    "></i>{" "}
+          <i className="fas fa-search    "></i>{" "}
         </label>
       </motion.form>
       <div className="status">

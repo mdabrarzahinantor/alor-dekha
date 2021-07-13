@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Search from "./Search";
 import { tags } from "./Tags";
 import db from "./Firebase";
+import Loading from "./Loading";
 
 function Main() {
   const { category } = useParams();
@@ -71,18 +72,7 @@ function Main() {
           );
         })}
       </main>
-      {loading ? (
-        <div className="loader">
-          <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
+      {loading ? <Loading /> : ""}
       <Footer />
     </div>
   );

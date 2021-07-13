@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./BigBlog.css";
 import Footer from "./Footer";
-import db, { auth } from "./Firebase";
+import db from "./Firebase";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { tags, tags_rev } from "./Tags";
+import { tags_rev } from "./Tags";
 import { motion } from "framer-motion";
 
 function BigBlog() {
@@ -12,13 +12,17 @@ function BigBlog() {
   const [blog, setBlog] = useState({});
   const [author, setAuthor] = useState("");
 
-  useEffect(() => {
-    db.collection("blogs")
-      .doc(id)
-      .onSnapshot((snap) => {
-        setBlog(snap.data());
-      });
-  }, []);
+  useEffect(
+    () => {
+      db.collection("blogs")
+        .doc(id)
+        .onSnapshot((snap) => {
+          setBlog(snap.data());
+        });
+      // Ami nicher comment ta dilam jate warning na ashe
+    }, // eslint-disable-next-line
+    []
+  );
 
   useEffect(() => {
     if (blog.author) {
@@ -54,7 +58,7 @@ function BigBlog() {
               }
               className="bb-blog-link"
             >
-              <i class="fas fa-link    "></i> {id}
+              <i className="fas fa-link    "></i> {id}
             </div>
             <div className="bb-blog-title">{blog?.title}</div>
             <div className="bb-blog-w-d-m f-p">
@@ -75,7 +79,7 @@ function BigBlog() {
                     to={`${tags_rev[tag] ? `/category/${tags_rev[tag]}` : ""}`}
                     className="bb-blog-tag"
                   >
-                    <i class="fas fa-asterisk    "></i> {tag}
+                    <i className="fas fa-asterisk    "></i> {tag}
                   </Link>
                 </>
               ))}

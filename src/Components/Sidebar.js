@@ -18,7 +18,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-home    "></i>
+            <i className="fas fa-home    "></i>
           </div>
           <div>মূলপাতা</div>
         </NavLink>
@@ -28,7 +28,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-mosque    "></i>
+            <i className="fas fa-mosque    "></i>
           </div>
           <div>ইসলাম</div>
         </NavLink>
@@ -38,7 +38,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-users    "></i>
+            <i className="fas fa-users    "></i>
           </div>
           <div>উম্মাহ</div>
         </NavLink>
@@ -48,7 +48,7 @@ function Sidebar() {
           className={`  sidebar-link`}
         >
           <div>
-            <i class="fas fa-lightbulb    "></i>
+            <i className="fas fa-lightbulb    "></i>
           </div>
           <div>বাদ-মতবাদ</div>
         </NavLink>
@@ -58,7 +58,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-sort-amount-up    "></i>
+            <i className="fas fa-sort-amount-up    "></i>
           </div>
           <div>সভ্যতার দ্বন্ধ</div>
         </NavLink>
@@ -68,7 +68,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-history    "></i>
+            <i className="fas fa-history    "></i>
           </div>
           <div>সমসাময়িক</div>
         </NavLink>
@@ -78,7 +78,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-list-ul    "></i>
+            <i className="fas fa-list-ul    "></i>
           </div>
           <div>তালিকাসমূহ</div>
         </NavLink>
@@ -88,7 +88,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-paint-brush    "></i>
+            <i className="fas fa-paint-brush    "></i>
           </div>
           <div>পোস্টার</div>
         </NavLink>
@@ -101,7 +101,7 @@ function Sidebar() {
           className={`  sidebar-link`}
         >
           <div>
-            <i class="fas fa-pen    "></i>
+            <i className="fas fa-pen    "></i>
           </div>
           <div>লেখকগণ</div>
         </NavLink>
@@ -111,7 +111,7 @@ function Sidebar() {
           className={` sidebar-link`}
         >
           <div>
-            <i class="fas fa-wifi    "></i>
+            <i className="fas fa-wifi    "></i>
           </div>
           <div>যোগাযোগ</div>
         </NavLink>

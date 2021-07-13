@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Blog from "./Blog";
+// import Blog from "./Blog";
 import "./Main.css";
 import Footer from "./Footer";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 import db from "./Firebase";
 import { motion } from "framer-motion";
+import Loading from "./Loading";
 
 function Main() {
   const [lists, setLists] = useState([]);
@@ -40,11 +41,11 @@ function Main() {
                 <div className="title">{list?.data.title}</div>
                 <div className="author">
                   {" "}
-                  <i class="fas fa-feather-alt    "></i> {list?.data.author}
+                  <i className="fas fa-feather-alt    "></i> {list?.data.author}
                 </div>
                 <div className="author">
                   {" "}
-                  <i class="fas fa-calendar    "></i>{" "}
+                  <i className="fas fa-calendar    "></i>{" "}
                   {new Date(
                     list?.data.timestamp?.toDate()
                   ).toLocaleDateString()}
@@ -54,16 +55,7 @@ function Main() {
           ))}
         </ol>
       </main>
-      {loading && (
-        <div className="loader">
-          <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      )}
+      {loading && <Loading />}
       <Footer />
     </div>
   );

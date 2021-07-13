@@ -44,7 +44,7 @@ function BigBlog() {
           onClick={() => navigator.clipboard.writeText(window.location.href)}
           className="bb-blog-link"
         >
-          <i class="fas fa-link    "></i> {poster}
+          <i className="fas fa-link    "></i> {poster}
         </div>
         <div className="bb-blog-title">{blog?.title}</div>
         <div className="bb-blog-w-d-m">
@@ -58,15 +58,15 @@ function BigBlog() {
         {/* <div className="bb-blog-tags">
           <div className="bb-blog-tag">
             {" "}
-            <i class="fas fa-tag    "></i> ইসলাম
+            <i className="fas fa-tag    "></i> ইসলাম
           </div>
           <div className="bb-blog-tag">
             {" "}
-            <i class="fas fa-tag    "></i> ইসলাম
+            <i className="fas fa-tag    "></i> ইসলাম
           </div>
           <div className="bb-blog-tag">
             {" "}
-            <i class="fas fa-tag    "></i> ইসলাম
+            <i className="fas fa-tag    "></i> ইসলাম
           </div>
         </div> */}
         <div className="bb-blog-desc">

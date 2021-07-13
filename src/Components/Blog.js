@@ -46,17 +46,17 @@ function Blog({ id, article, author, img_url, min, tags, timestamp, title }) {
 
         <div className="blog-footer">
           <div className="blog-link blog-footer-writer">
-            <i class="fas fa-feather-alt    "></i>
+            <i className="fas fa-feather-alt    "></i>
             <div className="name">{author}</div>
           </div>
           <div className="blog-link  blog-footer-date">
-            <i class="fas fa-calendar    "></i>
+            <i className="fas fa-calendar    "></i>
             <div className="name">
               {new Date(timestamp?.toDate()).toLocaleDateString()}
             </div>
           </div>
           <div className="blog-link  blog-footer-min">
-            <i class="fas fa-clock    "></i>
+            <i className="fas fa-clock    "></i>
             <div className="name">{min} মিনিট</div>
           </div>
         </div>

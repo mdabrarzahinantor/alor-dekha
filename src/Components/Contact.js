@@ -18,22 +18,22 @@ function BigBlog() {
       </div>
       <div className="bb-blog">
         {/* <div className="bb-blog-link">
-          <i class="fas fa-link    "></i> 6600
+          <i className="fas fa-link    "></i> 6600
         </div> */}
         <div className="bb-blog-title">যোগাযোগ</div>
         {/* <div className="bb-blog-w-d-m">আসিফ আদনান | ১০/০৭/২০১৯ | ৩ মিনিট</div>
         <div className="bb-blog-tags">
           <div className="bb-blog-tag">
             {" "}
-            <i class="fas fa-tag    "></i> ইসলাম
+            <i className="fas fa-tag    "></i> ইসলাম
           </div>
           <div className="bb-blog-tag">
             {" "}
-            <i class="fas fa-tag    "></i> ইসলাম
+            <i className="fas fa-tag    "></i> ইসলাম
           </div>
           <div className="bb-blog-tag">
             {" "}
-            <i class="fas fa-tag    "></i> ইসলাম
+            <i className="fas fa-tag    "></i> ইসলাম
           </div>
         </div>{" "} */}
         <div className="bb-blog-desc">

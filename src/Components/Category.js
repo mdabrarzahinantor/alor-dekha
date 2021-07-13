@@ -73,7 +73,7 @@ function Main() {
       </main>
       {loading ? (
         <div className="loader">
-          <div class="lds-ring">
+          <div classNameclass="lds-ring">
             <div></div>
             <div></div>
             <div></div>

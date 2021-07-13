@@ -40,11 +40,11 @@ function Main() {
                 <div className="title">{list?.data.title}</div>
                 <div className="author">
                   {" "}
-                  <i class="fas fa-feather-alt    "></i> {list?.data.author}
+                  <i className="fas fa-feather-alt    "></i> {list?.data.author}
                 </div>
                 <div className="author">
                   {" "}
-                  <i class="fas fa-calendar    "></i>{" "}
+                  <i className="fas fa-calendar    "></i>{" "}
                   {new Date(
                     list?.data.timestamp?.toDate()
                   ).toLocaleDateString()}
@@ -56,7 +56,7 @@ function Main() {
       </main>
       {loading && (
         <div className="loader">
-          <div class="lds-ring">
+          <div className="lds-ring">
             <div></div>
             <div></div>
             <div></div>

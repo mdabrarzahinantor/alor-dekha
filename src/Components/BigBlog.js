@@ -54,7 +54,7 @@ function BigBlog() {
               }
               className="bb-blog-link"
             >
-              <i class="fas fa-link    "></i> {id}
+              <i className="fas fa-link    "></i> {id}
             </div>
             <div className="bb-blog-title">{blog?.title}</div>
             <div className="bb-blog-w-d-m f-p">
@@ -75,7 +75,7 @@ function BigBlog() {
                     to={`${tags_rev[tag] ? `/category/${tags_rev[tag]}` : ""}`}
                     className="bb-blog-tag"
                   >
-                    <i class="fas fa-asterisk    "></i> {tag}
+                    <i className="fas fa-asterisk    "></i> {tag}
                   </Link>
                 </>
               ))}

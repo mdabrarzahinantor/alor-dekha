@@ -51,7 +51,7 @@ function Search() {
           id="search"
         />
         <label htmlFor="search">
-          <i class="fas fa-search    "></i>{" "}
+          <i className="fas fa-search    "></i>{" "}
         </label>
       </motion.form>
       <div className="status">

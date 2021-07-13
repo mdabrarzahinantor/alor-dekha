@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Blog from "./Blog";
+// import Blog from "./Blog";
 import "./Main.css";
 import Footer from "./Footer";
 import Search from "./Search";
 import Poster from "./Poster";
 import db from "./Firebase";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
 function Main() {
   const [blogs, setBlogs] = useState([]);
@@ -23,7 +23,7 @@ function Main() {
         updateState(snap);
         setLoading(false);
       });
-  }, []);
+  }, [latestDoc]);
 
   const updateState = (snap) => {
     if (snap.size !== 0) {

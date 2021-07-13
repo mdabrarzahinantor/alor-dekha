@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./BigBlog.css";
-import db, { auth } from "./Firebase";
+import db from "./Firebase";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
@@ -16,7 +16,7 @@ function BigBlog() {
       .onSnapshot((snap) => {
         setBlog(snap.data());
       });
-  }, []);
+  }, [poster]);
 
   useEffect(() => {
     if (blog.author) {

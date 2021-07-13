@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Blog from "./Blog";
 import db from "./Firebase";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import { motion } from "framer-motion";
 
 function Search() {

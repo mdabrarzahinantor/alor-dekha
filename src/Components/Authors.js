@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Blog from "./Blog";
+// import Blog from "./Blog";
 import "./Main.css";
 import Footer from "./Footer";
 import Search from "./Search";
 import { Link } from "react-router-dom";
 import db from "./Firebase";
 import { motion } from "framer-motion";
+import { v4 } from "uuid";
 
 function Main() {
   const [authors, setAuthors] = useState([]);
@@ -33,6 +34,7 @@ function Main() {
         <ol>
           {authors?.map((author) => (
             <motion.li
+              key={v4()}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.3 }}

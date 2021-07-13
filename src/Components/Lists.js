@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Blog from "./Blog";
+// import Blog from "./Blog";
 import "./Main.css";
 import Footer from "./Footer";
 import Search from "./Search";

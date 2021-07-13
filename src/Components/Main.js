@@ -21,7 +21,7 @@ function Main() {
         updateState(snap);
         setLoading(false);
       });
-  }, []);
+  }, [latestDoc]);
 
   const updateState = (snap) => {
     if (snap.size !== 0) {

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./BigBlog.css";
 import Footer from "./Footer";
 import BG_ABS from "../Assets/Images/BG_ABS.png";
 import { motion } from "framer-motion";
 
 function BigBlog() {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0 }}
